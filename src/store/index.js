@@ -1,7 +1,6 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import logger from 'redux-logger';
-import count from './reducers/count';
-import user from './reducers/user';
+import { count, user} from './reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const reducer = combineReducers({
