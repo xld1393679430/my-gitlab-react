@@ -1,25 +1,41 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { createAction } from "redux-actions";
+import { CHANGE_USER } from './store/reducers/user';
 import './App.css';
-import IP from './components/IP';
 
 function App() {
-  const state = useSelector(state => state)
+  const { count, user } = useSelector(state => state)
   const dispatch = useDispatch()
   const handleClick = ((type) => {
-    dispatch({type})
+    dispatch({ type })
   })
 
+  const handleChangeUser = (() => {
+    const changeUser = createAction(CHANGE_USER)
+    dispatch(changeUser({
+      name: '张三',
+      age: 10,
+      sex: '男'
+    }))
+  })
+
+  const { userInfo } = user
   return (
     <div className="App">
-      hello
-      {state.count}
-      <button onClick={() => handleClick('add')}>+</button>
-      <button onClick={() => handleClick('minus')}>-</button>
+      <h4>hello</h4>
+      <div>
+        <span>count: {count.num}</span>
+        <button onClick={() => handleClick('add')}>+</button>
+        <button onClick={() => handleClick('minus')}>-</button>
+      </div>
 
-      <p>
-        <IP />
-      </p>
+      <div>
+        <p>user.name: {userInfo.name}</p>
+        <p>user.age: {userInfo.age}</p>
+        <p>user.sex: {userInfo.sex}</p>
+        <button onClick={handleChangeUser}>ChangeUser</button>
+      </div>
     </div>
   );
 }

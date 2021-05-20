@@ -1,32 +1,25 @@
-import { createStore } from 'redux';
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import logger from 'redux-logger';
+import count from './reducers/count';
+import user from './reducers/user';
 
-const initialState = {
-    count: 0
-}
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const reducer = combineReducers({
+    count,
+    user,
+})
 
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'add':
-            return {
-                ...initialState,
-                count: state.count + 1
-            }
-        case 'minus':
-            return {
-                ...initialState,
-                count: state.count - 1
-            }
-        default:
-            return initialState
-    }
-}
+let middleware = []
+// logger记得放在最后面
+middleware.push(logger)
 
 const store = createStore(
     reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeEnhancers(
+        applyMiddleware(...middleware)
     )
+)
 
 export {
-    initialState,
     store
 }
