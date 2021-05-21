@@ -14,7 +14,7 @@ const count = (state = initialState, action) => {
                 num: state.num - 1
             }
         default:
-            return initialState
+            return state
     }
 }
 
