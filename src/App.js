@@ -10,7 +10,22 @@ import {
 import {
   TestUseReducer,
   TestCreateContext,
+  TestUseImperativeHandle,
+  TestUseDebugValue,
+  TestUnstableBatchedUpdates,
 } from './pages/hooks';
+
+import {
+  TimeSlice,
+} from './pages/largeData';
+
+import {
+  Index01,
+} from './pages/css';
+
+import {
+  Question01,
+} from './pages/questions';
 
 function App() {
 
@@ -19,7 +34,7 @@ function App() {
       <h4>hello</h4>
       
       <div id="redux">
-        <TestRedux />
+        {/* <TestRedux /> */}
       </div>
 
       <div id='test'>
@@ -31,7 +46,22 @@ function App() {
 
       <div id="hooks">
         {/* <TestUseReducer /> */}
-        <TestCreateContext />
+        {/* <TestCreateContext /> */}
+        {/* <TestUseImperativeHandle /> */}
+        {/* <TestUseDebugValue /> */}
+        {/* <TestUnstableBatchedUpdates /> */}
+      </div>
+
+      <div id="largeData">
+        {/* <TimeSlice /> */}
+      </div>
+
+      <div id="css">
+        {/* <Index01 /> */}
+      </div>
+
+      <div id="Question">
+        <Question01 />
       </div>
     </div>
   );
