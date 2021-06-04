@@ -13,6 +13,7 @@ import {
   TestUseImperativeHandle,
   TestUseDebugValue,
   TestUnstableBatchedUpdates,
+  TestUseDeferredValue,
 } from './pages/hooks';
 
 import {
@@ -30,9 +31,7 @@ import {
 function App() {
 
   return (
-    <div className="App">
-      <h4>hello</h4>
-      
+    <div className="App">      
       <div id="redux">
         {/* <TestRedux /> */}
       </div>
@@ -50,6 +49,7 @@ function App() {
         {/* <TestUseImperativeHandle /> */}
         {/* <TestUseDebugValue /> */}
         {/* <TestUnstableBatchedUpdates /> */}
+        <TestUseDeferredValue />
       </div>
 
       <div id="largeData">
@@ -61,7 +61,7 @@ function App() {
       </div>
 
       <div id="Question">
-        <Question01 />
+        {/* <Question01 /> */}
       </div>
     </div>
   );
