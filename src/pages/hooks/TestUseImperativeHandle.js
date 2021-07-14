@@ -29,7 +29,6 @@ const ForwardRefSon = forwardRef(Son)
 const Page = () => {
     const ref = useRef(null)
     const handleClick = () => {
-        console.log(ref, 'ref');
         const { onFocus, onChangeValue } = ref.current
         onFocus()
         onChangeValue('2222')

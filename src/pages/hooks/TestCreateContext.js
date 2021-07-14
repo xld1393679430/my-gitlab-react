@@ -4,7 +4,6 @@ const Context = createContext()
 
 const Son = () => {
     const context = useContext(Context)
-    console.log(context, 'context');
     return (
         <div>
             <h4>son</h4>

@@ -14,6 +14,7 @@ import {
   TestUseDebugValue,
   TestUnstableBatchedUpdates,
   TestUseDeferredValue,
+  TestUseMemo,
 } from './pages/hooks';
 
 import {
@@ -26,12 +27,24 @@ import {
 
 import {
   Question01,
+  Question03,
+  Question04,
+  Question05,
+  Question06,
 } from './pages/questions';
+
+import {
+  JDemo01,
+  JDemo02,
+  JDemo03,
+  JDemo04,
+  JDemo05,
+} from './pages/juejin'
 
 function App() {
 
   return (
-    <div className="App">      
+    <div className="App">
       <div id="redux">
         {/* <TestRedux /> */}
       </div>
@@ -49,7 +62,8 @@ function App() {
         {/* <TestUseImperativeHandle /> */}
         {/* <TestUseDebugValue /> */}
         {/* <TestUnstableBatchedUpdates /> */}
-        <TestUseDeferredValue />
+        {/* <TestUseDeferredValue /> */}
+        {/* <TestUseMemo /> */}
       </div>
 
       <div id="largeData">
@@ -62,6 +76,18 @@ function App() {
 
       <div id="Question">
         {/* <Question01 /> */}
+        {/* <Question03 /> */}
+        {/* <Question04 /> */}
+        {/* <Question05 /> */}
+        {/* <Question06 /> */}
+      </div>
+
+      <div id="Juejin">
+        {/* <JDemo01 /> */}
+        {/* <JDemo02 /> */}
+        {/* <JDemo03 /> */}
+        {/* <JDemo04 />  */}
+        <JDemo05 />
       </div>
     </div>
   );

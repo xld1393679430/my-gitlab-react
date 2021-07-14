@@ -6,7 +6,6 @@ class Text extends React.Component{
     }
 }
 // function WarpComponent(props){
-//     console.log(props.children)
 //     return props.children
 // }
 // function Page(){
@@ -25,7 +24,6 @@ class Text extends React.Component{
 
 function WarpComponent(props) {
     const newChildrenArray = React.Children.toArray(props.children)
-    console.log(newChildrenArray, 'newChildrenArray')
     return newChildrenArray
 }
 function Page() {

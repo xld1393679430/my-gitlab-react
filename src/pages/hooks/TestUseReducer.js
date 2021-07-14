@@ -3,7 +3,6 @@ import { Form, Input, Button } from 'antd';
 
 const Page = () => {
   const [query, dispatchQuery] = useReducer((state, action) => {
-    console.log(state, action, 11111)
     const { payload, type } = action
     switch (type) {
       case 'update':
@@ -16,9 +15,7 @@ const Page = () => {
     }
   }, {})
   const list = useMemo(() => {
-    console.log(query, 22222)
     if (query.username && query.tel) {
-      console.log(query, 3333)
       return [1, 2, 3]
     } else {
       return []
@@ -36,8 +33,6 @@ const Page = () => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-
-  console.log(list, 'list')
 
   return (
     <div>

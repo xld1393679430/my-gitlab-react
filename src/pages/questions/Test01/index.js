@@ -30,7 +30,6 @@ const Page = () => {
         };
         // data.push(obj);
         setData((prev) => prev.concat(obj))
-        // console.log(data);
     }
 
     return (

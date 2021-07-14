@@ -8,7 +8,6 @@ const Page = () => {
     useEffect(() => {
         const ip = os.networkInterfaces().en0[0].address
         const options = process.argv.slice(2)
-        console.log(os, os.getNetworkInterfaces(), os.platform(), os.networkInterfaces());
         if (options[0] === '-v') {
             console.log('v1.0.0')
         } else {

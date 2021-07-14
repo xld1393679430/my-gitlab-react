@@ -7,7 +7,6 @@ function FatherComponent({ children }){
 }
 
 function SonComponent(props){
-    console.log(props)
     return <div>hello,world</div>
 }
 
