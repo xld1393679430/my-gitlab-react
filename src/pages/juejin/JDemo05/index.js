@@ -1,16 +1,19 @@
-import React, { useRef, forwardRef } from 'react';
+import React, { useRef } from 'react';
 import Form from './components/Form'
 import FormItem from './components/FormItem'
 import Input from './components/Input'
 
-const Page = (props, ref) => {
-    const form = useRef(null)
+function Page(props) {
+    const form = useRef()
 
-    const submit = () => {
-        console.log(ref, 'ref');
-        // form.current.submitForm((data) => {
-        //     console.log(data, 'data');
-        // })
+    const handleSubmit = () => {
+        form.current.submitForm((data) => {
+            console.log(data, 'data');
+        })
+    }
+
+    const handleReset = () => {
+        form.current.resetForm()
     }
 
     return (
@@ -24,9 +27,10 @@ const Page = (props, ref) => {
                     <Input name="password" />
                 </FormItem>
             </Form>
-            <button onClick={submit}>提交</button>
+            <button onClick={handleSubmit}>提交</button>
+            <button onClick={handleReset}>重置</button>
         </div>
     )
 }
 
-export default forwardRef(Page)
+export default Page

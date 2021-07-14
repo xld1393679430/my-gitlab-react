@@ -1,12 +1,12 @@
 import React from 'react'
+import { useCallback } from 'react'
 
 const FormItem = (props) => {
-    console.log(props, 'props---00')
     const { children, handleChange, name, value, label } = props
 
-    const onChange = (value) => {
+    const onChange = useCallback( (value) => {
         handleChange && handleChange(name, value)
-    }
+    }, [handleChange, name])
 
     return (
         <div>
