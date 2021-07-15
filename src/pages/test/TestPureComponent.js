@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 class Page extends React.Component {
     constructor(props) {
         super(props)
@@ -18,13 +18,13 @@ class Page extends React.Component {
     }
     render() {
         const { user } = this.state
-        return <div className="box" >
+        return (<div className="box" >
             <div className="show" >
                 <div> 你的姓名是: {user.name} </div>
                 <div> 年龄： {user.age}</div>
                 <button onClick={this.handleClick} >age++</button>
             </div>
-        </div>
+        </div>)
     }
 }
 

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { unstable_batchedUpdates } from 'react-dom/cjs/react-dom.development';
+import { useState } from 'react'
+import { unstable_batchedUpdates } from 'react-dom/cjs/react-dom.development'
 
 
 const Page = () => {
@@ -9,65 +9,65 @@ const Page = () => {
     const [count4, setCount4] = useState(0)
 
     const handleAdd = () => {
-        console.log(count1, 'a');
+        console.log(count1, 'a')
         setCount1(count1 => {
-            console.log(count1, 'b');
+            console.log(count1, 'b')
             return count1 + 1
         })
-        console.log(count1, 'c');
+        console.log(count1, 'c')
         setCount1(count1 => {
-            console.log(count1, 'd');
+            console.log(count1, 'd')
             return count1 + 2
         })
-        console.log(count1, 'e');
+        console.log(count1, 'e')
     }
 
     const handleBatchAdd = () => {
         unstable_batchedUpdates(() => {
-            console.log(count2, 'a');
+            console.log(count2, 'a')
             setCount2(count2 => {
-                console.log(count2, 'b');
+                console.log(count2, 'b')
                 return count2 + 1
             })
-            console.log(count2, 'c');
+            console.log(count2, 'c')
             setCount2(count2 => {
-                console.log(count2, 'd');
+                console.log(count2, 'd')
                 return count2 + 2
             })
-            console.log(count2, 'e');
+            console.log(count2, 'e')
         })
     }
 
     const handleSyncAdd = () => {
         setTimeout(() => {
-            console.log(count3, 'a');
+            console.log(count3, 'a')
             setCount3(count3 => {
-                console.log(count3, 'b');
+                console.log(count3, 'b')
                 return count3 + 1
             })
-            console.log(count3, 'c');
+            console.log(count3, 'c')
             setCount3(count3 => {
-                console.log(count3, 'd');
+                console.log(count3, 'd')
                 return count3 + 2
             })
-            console.log(count3, 'e');
+            console.log(count3, 'e')
         }, 100)
     }
 
     const handleBatchSyncAdd = () => {
         setTimeout(() => {
             unstable_batchedUpdates(() => {
-                console.log(count4, 'a');
+                console.log(count4, 'a')
                 setCount4(count4 => {
-                    console.log(count4, 'b');
+                    console.log(count4, 'b')
                     return count4 + 1
                 })
-                console.log(count4, 'c');
+                console.log(count4, 'c')
                 setCount4(count4 => {
-                    console.log(count4, 'd');
+                    console.log(count4, 'd')
                     return count4 + 2
                 })
-                console.log(count4, 'e');
+                console.log(count4, 'e')
             })
         }, 100)
     }

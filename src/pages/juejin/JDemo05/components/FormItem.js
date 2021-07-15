@@ -4,7 +4,7 @@ import { useCallback } from 'react'
 const FormItem = (props) => {
     const { children, handleChange, name, value, label } = props
 
-    const onChange = useCallback( (value) => {
+    const onChange = useCallback((value) => {
         handleChange && handleChange(name, value)
     }, [handleChange, name])
 
@@ -12,9 +12,11 @@ const FormItem = (props) => {
         <div>
             <span>{label}:</span>
             {
-                React.isValidElement(children) && children.type.displayName === 'Input' ? (
+                React.isValidElement(children) && children.type.displayName === 'Input'
+? (
                     React.cloneElement(children, { onChange, value })
-                ) : null
+                )
+: null
             }
         </div>
     )

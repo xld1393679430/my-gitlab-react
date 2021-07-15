@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-class Text extends React.Component{
-    render(){
+class Text extends React.Component {
+    render() {
         return <div>hello,world</div>
     }
 }
@@ -27,16 +27,16 @@ function WarpComponent(props) {
     return newChildrenArray
 }
 function Page() {
-    return <div style={{ marginTop: '50px' }} >
+    return (<div style={{ marginTop: '50px' }} >
         <WarpComponent>
         { 
-            new Array(3).fill(0).map((item,index)=> new Array(2).fill(1).map((item,index1)=> {
+            new Array(3).fill(0).map((item, index) => new Array(2).fill(1).map((item, index1) => {
                 return <Text key={index+index1} />
             })) }
 
             <span>hello,world</span>
         </WarpComponent>
-    </div>
+    </div>)
 }
 
 export default Page

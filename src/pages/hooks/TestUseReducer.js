@@ -1,5 +1,5 @@
-import { useReducer, useMemo } from 'react';
-import { Form, Input, Button } from 'antd';
+import { useReducer, useMemo } from 'react'
+import { Form, Input, Button } from 'antd'
 
 const Page = () => {
   const [query, dispatchQuery] = useReducer((state, action) => {
@@ -8,50 +8,50 @@ const Page = () => {
       case 'update':
         return {
           ...state,
-          ...payload,
+          ...payload
         }
       default:
-        break;
+        break
     }
   }, {})
   const list = useMemo(() => {
-    if (query.username && query.tel) {
+    if (query.username && query.tel) 
       return [1, 2, 3]
-    } else {
+     else 
       return []
-    }
+    
   }, [query])
 
   const onFinish = (values) => {
-    console.log('Success:', values);
+    console.log('Success:', values)
     dispatchQuery({
       type: 'update',
       payload: values
     })
-  };
+  }
 
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+    console.log('Failed:', errorInfo)
+  }
 
   return (
     <div>
       <Form
-      layout="inline"
-      name="basic"
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
+          layout="inline"
+          name="basic"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
     >
       <Form.Item
-        label="username"
-        name="username"
+          label="username"
+          name="username"
       >
         <Input />
       </Form.Item>
 
       <Form.Item
-        label="tel"
-        name="tel"
+          label="tel"
+          name="tel"
       >
         <Input />
       </Form.Item>
@@ -64,11 +64,11 @@ const Page = () => {
     </Form>
     <ul>
       {
-        list && list.length > 0 && list.map(item => <li key={item}>{item}</li> )
+        list && list.length > 0 && list.map(item => <li key={item}>{item}</li>)
       }
     </ul>
     </div>
-  );
-};
+  )
+}
 
 export default Page

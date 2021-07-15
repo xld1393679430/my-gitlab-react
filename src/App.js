@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
-import { TestRedux } from './pages/redux';
+import React from "react";
+import "./App.css";
+import { TestRedux } from "./pages/redux";
 import {
   TestPureComponent,
   TestCloneElement,
   TestCreateFactor,
   TestChildren,
-} from './pages/test';
+} from "./pages/test";
 import {
   TestUseReducer,
   TestCreateContext,
@@ -15,15 +15,11 @@ import {
   TestUnstableBatchedUpdates,
   TestUseDeferredValue,
   TestUseMemo,
-} from './pages/hooks';
+} from "./pages/hooks";
 
-import {
-  TimeSlice,
-} from './pages/largeData';
+import { TimeSlice } from "./pages/largeData";
 
-import {
-  Index01,
-} from './pages/css';
+import { Index01 } from "./pages/css";
 
 import {
   Question01,
@@ -31,7 +27,7 @@ import {
   Question04,
   Question05,
   Question06,
-} from './pages/questions';
+} from "./pages/questions";
 
 import {
   JDemo01,
@@ -39,17 +35,19 @@ import {
   JDemo03,
   JDemo04,
   JDemo05,
-} from './pages/juejin'
+  JDemo06,
+  JDemo07,
+  JDemo08,
+} from "./pages/juejin";
+
+import { ExportDemo, name } from "./pages/juejin/exportDemo";
 
 function App() {
-
   return (
     <div className="App">
-      <div id="redux">
-        {/* <TestRedux /> */}
-      </div>
+      <div id="redux">{/* <TestRedux /> */}</div>
 
-      <div id='test'>
+      <div id="test">
         {/* <TestPureComponent /> */}
         {/* <TestCloneElement /> */}
         {/* <TestCreateFactor /> */}
@@ -66,13 +64,9 @@ function App() {
         {/* <TestUseMemo /> */}
       </div>
 
-      <div id="largeData">
-        {/* <TimeSlice /> */}
-      </div>
+      <div id="largeData">{/* <TimeSlice /> */}</div>
 
-      <div id="css">
-        {/* <Index01 /> */}
-      </div>
+      <div id="css">{/* <Index01 /> */}</div>
 
       <div id="Question">
         {/* <Question01 /> */}
@@ -87,7 +81,15 @@ function App() {
         {/* <JDemo02 /> */}
         {/* <JDemo03 /> */}
         {/* <JDemo04 />  */}
-        <JDemo05 />
+        {/* <JDemo05 /> */}
+        {/* <JDemo06 /> */}
+        {/* <JDemo07 /> */}
+        <JDemo08 />
+      </div>
+
+      <div id="ExportDemo">
+        {/* <span>name: {name}</span>
+        <ExportDemo /> */}
       </div>
     </div>
   );

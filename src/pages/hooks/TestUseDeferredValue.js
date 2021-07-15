@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 // 
 function Page() {
@@ -8,17 +8,17 @@ function Page() {
         return x
     }
 
-    function *handler(A, B, C){
-        console.log(A, B, C, 'handler');
-        var x = doExpensiveWorkA(A);
-        console.log(x, 1);
-        yield;
-        var y = x + doExpensiveWorkA(B);
-        console.log(x, y, 2);
-        yield;
-        var z = y + doExpensiveWorkA(C);
-        console.log(x, y, z, 3);
-        return z;
+    function *handler(A, B, C) {
+        console.log(A, B, C, 'handler')
+        var x = doExpensiveWorkA(A)
+        console.log(x, 1)
+        yield
+        var y = x + doExpensiveWorkA(B)
+        console.log(x, y, 2)
+        yield
+        var z = y + doExpensiveWorkA(C)
+        console.log(x, y, z, 3)
+        return z
     }
 
     useEffect(() => {

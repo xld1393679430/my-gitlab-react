@@ -2,7 +2,7 @@ import React, {
     forwardRef,
     useCallback,
     useState,
-    useImperativeHandle,
+    useImperativeHandle
 } from "react"
 
 const Form = (props, ref) => {
@@ -32,7 +32,7 @@ const Form = (props, ref) => {
 
     useImperativeHandle(ref, () => ({
         submitForm,
-        resetForm,
+        resetForm
     }))
 
     const Render = useCallback(() => {
@@ -40,7 +40,7 @@ const Form = (props, ref) => {
         React.Children.forEach(children, (child) => {
             if (child.type.displayName === 'FormItem') {
                 const { name } = child.props
-                console.log(formData, child, 2222);
+                console.log(formData, child, 2222)
                 const Children = React.cloneElement(child, {
                     key: name,
                     handleChange: setValue,

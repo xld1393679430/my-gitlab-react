@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Table } from 'antd';
-import list from './data.js';
+import React, { useState, useEffect } from 'react'
+import { Table } from 'antd'
+import list from './data.js'
 
 const Page = () => {
     const [data, setData] = useState(list)
@@ -27,7 +27,7 @@ const Page = () => {
             date: '2018-05-07',
             name: '小明',
             address: ''
-        };
+        }
         // data.push(obj);
         setData((prev) => prev.concat(obj))
     }

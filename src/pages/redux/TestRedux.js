@@ -1,6 +1,6 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { createAction } from "redux-actions";
-import { CHANGE_USER } from '../../store/reducers/user';
+import { useSelector, useDispatch } from 'react-redux'
+import { createAction } from "redux-actions"
+import { CHANGE_USER } from '../../store/reducers/user'
 
 const Page = () => {
     const { count, user } = useSelector(state => state)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
 // 处理大量数据的方法1: 时间分片
 const Page = () => {

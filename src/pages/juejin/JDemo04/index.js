@@ -1,7 +1,7 @@
 import React, { isValidElement, cloneElement } from "react"
 
 const Demo = (props) => {
-    console.log(props, 'Demo');
+    console.log(props, 'Demo')
     return (
         <div>
             <p>Demo</p>
@@ -17,13 +17,13 @@ const Container = (props) => {
     }
 
     return props.children.map((item) => {
-        if (isValidElement(item)) {
+        if (isValidElement(item)) 
             return cloneElement(item, {...ContainerProps}, item.props.children)
-        } else if (typeof item === 'function') {
+         else if (typeof item === 'function') 
             return item(ContainerProps)
-        } else {
+         else 
             return null
-        }
+        
     })
 }
 
@@ -44,4 +44,4 @@ const Page = () => {
     )
 }
 
-export default Page;
+export default Page

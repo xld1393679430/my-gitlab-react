@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import reactDom from "react-dom";
+import reactDom from "react-dom"
 
 const Page = () => {
     const [number, setNumber] = useState(0)
 
     useEffect(() => {
-        console.log('current number: ', number);
+        console.log('current number: ', number)
     }, [number])
 
     const handleClick = () => {

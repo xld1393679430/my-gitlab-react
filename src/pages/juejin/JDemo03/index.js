@@ -10,7 +10,7 @@ const Dog = (props) => {
         msg,
         renderName,
         say,
-        Component,
+        Component
     } = props
 
     const renderFunction = children[0]

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { unstable_batchedUpdates } from 'react-dom';
+import { useState, useEffect } from 'react'
+import { unstable_batchedUpdates } from 'react-dom'
 
 const Page = () => {
     let [name, setName] = useState('张三')
@@ -15,7 +15,7 @@ const Page = () => {
     }
 
     useEffect(() => {
-        console.log(name, age, 'useEffect');
+        console.log(name, age, 'useEffect')
     }, [name, age])
 
     return (

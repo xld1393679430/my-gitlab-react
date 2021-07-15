@@ -1,17 +1,17 @@
 const Page = (props) => {
     return (
       <textarea
-        style={{
+          style={{
           width: '100%',
           margin: '12px 0',
           outline: 'none',
           padding: 12,
           border: '2px solid #eee',
           color: '#666',
-          borderRadius: 4,
+          borderRadius: 4
         }}
-        rows={25}
-        {...props}
+          rows={25}
+          {...props}
       />
     )
   }

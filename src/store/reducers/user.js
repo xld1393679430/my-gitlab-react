@@ -1,4 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { handleActions } from 'redux-actions'
 
 export const CHANGE_USER = 'CHANGE_USER'
 

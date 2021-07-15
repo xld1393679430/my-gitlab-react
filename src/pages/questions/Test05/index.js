@@ -1,4 +1,4 @@
-import React, { useState, useMemo, memo } from 'react';
+import React, { useState, useMemo, memo } from 'react'
 
 const Child = memo(({ data, child }) => {
     return (
@@ -47,4 +47,4 @@ const Page = () => {
     )
 }
 
-export default Page;
+export default Page
