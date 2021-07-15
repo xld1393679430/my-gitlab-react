@@ -1,12 +1,12 @@
-import React, { useImperativeHandle, useRef, useEffect, forwardRef } from 'react'
+/** @format */
 
-const Hoc = (Component) => {
+import React, {useImperativeHandle, useRef, useEffect, forwardRef} from 'react'
+
+const Hoc = Component => {
     class Wrap extends React.Component {
         render() {
-            const { forwardedRef, ...otherProps } = this.props
-            return (
-                <Component ref={forwardedRef} {...otherProps} />
-            )
+            const {forwardedRef, ...otherProps} = this.props
+            return <Component ref={forwardedRef} {...otherProps} />
         }
     }
     return forwardRef((props, ref) => <Wrap forwardedRef={ref} {...props} />)
@@ -18,17 +18,18 @@ function Son2(props, ref) {
 
     const say = () => alert('i am son2')
 
-    useImperativeHandle(ref, () => {
-        return {
-            say
-        }
-    }, [])
-
-    return (
-        <div>Son</div>
+    useImperativeHandle(
+        ref,
+        () => {
+            return {
+                say,
+            }
+        },
+        [],
     )
-}
 
+    return <div>Son</div>
+}
 
 // 类组件可以通过ref直接拿到类的实例
 class Son1 extends React.Component {
@@ -60,7 +61,6 @@ const Page = () => {
                 <HocSon2 ref={ref2} name="son2" />
                 <button onClick={ref2.current.say}>按钮</button>
             </p>
-
         </>
     )
 }

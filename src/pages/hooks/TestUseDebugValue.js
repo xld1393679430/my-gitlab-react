@@ -1,4 +1,6 @@
-import { useState, useDebugValue } from 'react'
+/** @format */
+
+import {useState, useDebugValue} from 'react'
 
 const Page = () => {
     const [isOnline, setIsOnline] = useState(null)

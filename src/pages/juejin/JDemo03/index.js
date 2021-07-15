@@ -1,17 +1,11 @@
+/** @format */
+
 const ChildrenComponent = () => {
-    return (
-        <p>i am ChildrenComponent</p>
-    )
+    return <p>i am ChildrenComponent</p>
 }
 
-const Dog = (props) => {
-    const {
-        children,
-        msg,
-        renderName,
-        say,
-        Component
-    } = props
+const Dog = props => {
+    const {children, msg, renderName, say, Component} = props
 
     const renderFunction = children[0]
     const renderComponent = children[1]
@@ -29,7 +23,7 @@ const Dog = (props) => {
             {renderName()}
             {renderComponent}
             <Component />
-            <button onClick={() => say()} > change content </button>
+            <button onClick={() => say()}> change content </button>
         </div>
     )
 }
@@ -43,8 +37,7 @@ const Page = () => {
             msg={'hello world'}
             say={say}
             Component={ChildrenComponent}
-            renderName={() => <span>my name is renderName</span>}
-        >
+            renderName={() => <span>my name is renderName</span>}>
             {() => <span>hello world</span>}
             <ChildrenComponent />
         </Dog>

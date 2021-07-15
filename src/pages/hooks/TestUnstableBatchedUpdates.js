@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react'
-import { unstable_batchedUpdates } from 'react-dom'
+/** @format */
+
+import {useState, useEffect} from 'react'
+import {unstable_batchedUpdates} from 'react-dom'
 
 const Page = () => {
     let [name, setName] = useState('张三')

@@ -1,11 +1,14 @@
-const Input = (props) => {
-    const { value, onChange } = props
+/** @format */
+
+const Input = props => {
+    const {value, onChange} = props
     return (
         <input
             value={value}
-            onChange={(e) => {
+            onChange={e => {
                 onChange && onChange(e.target.value)
-            }} />
+            }}
+        />
     )
 }
 

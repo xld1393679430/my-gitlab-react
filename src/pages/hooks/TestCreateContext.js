@@ -1,4 +1,6 @@
-import { createContext, useContext } from 'react'
+/** @format */
+
+import {createContext, useContext} from 'react'
 
 const Context = createContext()
 
@@ -16,7 +18,7 @@ const Page = () => {
     return (
         <Context.Provider value={{age: 2}}>
             <Son />
-        </Context.Provider> 
+        </Context.Provider>
     )
 }
 

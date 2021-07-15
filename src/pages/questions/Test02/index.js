@@ -1,7 +1,7 @@
+/** @format */
+
 import './index.css'
 
 const Page = () => {
-    return (
-        
-    )
+    return <div>null</div>
 }

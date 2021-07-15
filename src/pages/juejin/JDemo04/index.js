@@ -1,6 +1,8 @@
-import React, { isValidElement, cloneElement } from "react"
+/** @format */
 
-const Demo = (props) => {
+import React, {isValidElement, cloneElement} from 'react'
+
+const Demo = props => {
     console.log(props, 'Demo')
     return (
         <div>
@@ -10,20 +12,16 @@ const Demo = (props) => {
     )
 }
 
-const Container = (props) => {
+const Container = props => {
     const ContainerProps = {
         name: 'aline',
-        msg: 'let us learn react'
+        msg: 'let us learn react',
     }
 
-    return props.children.map((item) => {
-        if (isValidElement(item)) 
-            return cloneElement(item, {...ContainerProps}, item.props.children)
-         else if (typeof item === 'function') 
-            return item(ContainerProps)
-         else 
-            return null
-        
+    return props.children.map(item => {
+        if (isValidElement(item)) return cloneElement(item, {...ContainerProps}, item.props.children)
+        else if (typeof item === 'function') return item(ContainerProps)
+        else return null
     })
 }
 
@@ -31,16 +29,14 @@ const Page = () => {
     return (
         <div>
             <Container>
-            <Demo name="a" />
-            { (constainerProps) => <Demo name="b" {...constainerProps} />}
-        </Container>
-        <Demo>
-            {/* <h4>title</h4> */}
-            <button>按钮</button>
-        </Demo>
-        </div> 
-
-
+                <Demo name="a" />
+                {constainerProps => <Demo name="b" {...constainerProps} />}
+            </Container>
+            <Demo>
+                {/* <h4>title</h4> */}
+                <button>按钮</button>
+            </Demo>
+        </div>
     )
 }
 

@@ -1,1 +1,3 @@
-export { default as TestRedux } from './TestRedux'
+/** @format */
+
+export {default as TestRedux} from './TestRedux'

@@ -1,1 +1,3 @@
-export { default as ExportDemo, name } from "./demo";
+/** @format */
+
+export {default as ExportDemo, name} from './demo'

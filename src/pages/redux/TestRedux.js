@@ -1,25 +1,29 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { createAction } from "redux-actions"
-import { CHANGE_USER } from '../../store/reducers/user'
+/** @format */
+
+import {useSelector, useDispatch} from 'react-redux'
+import {createAction} from 'redux-actions'
+import {CHANGE_USER} from '../../store/reducers/user'
 
 const Page = () => {
-    const { count, user } = useSelector(state => state)
+    const {count, user} = useSelector(state => state)
     const dispatch = useDispatch()
-    
-    const handleClick = ((type) => {
-      dispatch({ type })
-    })
-  
-    const handleChangeUser = (() => {
-      const changeUser = createAction(CHANGE_USER)
-      dispatch(changeUser({
-        name: '张三',
-        age: 10,
-        sex: '男'
-      }))
-    })
-  
-    const { userInfo } = user
+
+    const handleClick = type => {
+        dispatch({type})
+    }
+
+    const handleChangeUser = () => {
+        const changeUser = createAction(CHANGE_USER)
+        dispatch(
+            changeUser({
+                name: '张三',
+                age: 10,
+                sex: '男',
+            }),
+        )
+    }
+
+    const {userInfo} = user
 
     return (
         <>

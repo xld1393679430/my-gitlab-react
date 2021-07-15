@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react'
+/** @format */
 
-// 
+import {useState, useEffect} from 'react'
+
+//
 function Page() {
     const [text, setText] = useState('hello')
 
@@ -8,7 +10,7 @@ function Page() {
         return x
     }
 
-    function *handler(A, B, C) {
+    function* handler(A, B, C) {
         console.log(A, B, C, 'handler')
         var x = doExpensiveWorkA(A)
         console.log(x, 1)

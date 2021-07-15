@@ -1,5 +1,7 @@
-export const name = "hello";
+/** @format */
+
+export const name = 'hello'
 
 export default function Demo() {
-  return <div>demo</div>;
+    return <div>demo</div>
 }

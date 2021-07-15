@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react"
-import reactDom from "react-dom"
+/** @format */
+
+import {useEffect, useState} from 'react'
+import reactDom from 'react-dom'
 
 const Page = () => {
     const [number, setNumber] = useState(0)

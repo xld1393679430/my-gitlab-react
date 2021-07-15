@@ -1,4 +1,6 @@
-import React, { useRef } from 'react'
+/** @format */
+
+import React, {useRef} from 'react'
 import Form from './components/Form'
 import FormItem from './components/FormItem'
 import Input from './components/Input'
@@ -7,7 +9,7 @@ function Page(props) {
     const form = useRef()
 
     const handleSubmit = () => {
-        form.current.submitForm((data) => {
+        form.current.submitForm(data => {
             console.log(data, 'data')
         })
     }

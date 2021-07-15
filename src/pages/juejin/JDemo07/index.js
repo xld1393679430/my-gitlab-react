@@ -1,18 +1,21 @@
-import { useEffect, useRef } from "react"
+/** @format */
+
+import {useEffect, useRef} from 'react'
 
 const toLearn = [
     {
         type: 1,
-        msg: 'aaa'
-    }, {
+        msg: 'aaa',
+    },
+    {
         type: 2,
-        msg: 'bbb'
-    }
+        msg: 'bbb',
+    },
 ]
 
 const Page = () => {
     const typeInfo = useRef(toLearn[0])
-    const handleClick = (item) => {
+    const handleClick = item => {
         typeInfo.current = item
         console.log(typeInfo, 'typeInfo-2')
     }
@@ -25,7 +28,9 @@ const Page = () => {
         <div>
             {toLearn.map(item => {
                 return (
-                    <p key={item.type} onClick={() => handleClick(item)}>{item.msg}</p>
+                    <p key={item.type} onClick={() => handleClick(item)}>
+                        {item.msg}
+                    </p>
                 )
             })}
         </div>

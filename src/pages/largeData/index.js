@@ -1,1 +1,3 @@
-export { default as TimeSlice } from './TimeSlice'
+/** @format */
+
+export {default as TimeSlice} from './TimeSlice'

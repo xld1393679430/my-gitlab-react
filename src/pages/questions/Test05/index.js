@@ -1,6 +1,8 @@
-import React, { useState, useMemo, memo } from 'react'
+/** @format */
 
-const Child = memo(({ data, child }) => {
+import React, {useState, useMemo, memo} from 'react'
+
+const Child = memo(({data, child}) => {
     return (
         <div>
             <p>name:{data.name}</p>
@@ -13,7 +15,7 @@ const Page = () => {
     const [data, setData] = useState({name: 'a'})
 
     const _data1 = useMemo(() => {
-        return { name: 'a1'}
+        return {name: 'a1'}
     }, [])
 
     const _data2 = useMemo(() => {
@@ -21,10 +23,10 @@ const Page = () => {
     }, [data])
 
     const _data3 = {
-        name: 'a3'
+        name: 'a3',
     }
 
-    const handleClick = (e) => {
+    const handleClick = e => {
         setCount(count + 1)
     }
 

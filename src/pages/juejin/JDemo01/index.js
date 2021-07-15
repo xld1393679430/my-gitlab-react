@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import { unstable_batchedUpdates } from 'react-dom/cjs/react-dom.development'
+/** @format */
 
+import {useState} from 'react'
+import {unstable_batchedUpdates} from 'react-dom/cjs/react-dom.development'
 
 const Page = () => {
     const [count1, setCount1] = useState(0)

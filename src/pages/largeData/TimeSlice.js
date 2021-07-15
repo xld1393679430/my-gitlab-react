@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react'
+/** @format */
+
+import React, {useEffect, useState} from 'react'
 
 // 处理大量数据的方法1: 时间分片
 const Page = () => {
@@ -15,10 +17,9 @@ const Page = () => {
             // requestAnimationFrame效果比setTime更好
             window.requestAnimationFrame(() => getList1(data, time + 1))
         }
-
     }
 
-    const getList2 = (data) => {
+    const getList2 = data => {
         setList(data)
     }
 
@@ -32,9 +33,9 @@ const Page = () => {
         <div>
             <button onClick={handleClick}>handleClick</button>
             <ul>
-                {
-                    list.map((item, index) => <li key={index}>{index + 1}</li>)
-                }
+                {list.map((item, index) => (
+                    <li key={index}>{index + 1}</li>
+                ))}
             </ul>
         </div>
     )
