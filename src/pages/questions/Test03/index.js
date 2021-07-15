@@ -7,10 +7,8 @@ const Page = () => {
   let count1, count2, setCount1, setCount2
   const [random, setRandom] = useState(0)
   if (random > 0.5) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     ;[count1, setCount1] = useState(1, 'count-1')
   } else {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     ;[count2, setCount2] = useState(2, 'count-2')
   }
   return (

@@ -3,6 +3,7 @@
 const initialState = {
   num: 0,
 }
+
 const count = (state = initialState, action) => {
   switch (action.type) {
     case 'add':
