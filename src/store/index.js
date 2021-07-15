@@ -6,8 +6,8 @@ import {count, user} from './reducers'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const reducer = combineReducers({
-    count,
-    user,
+  count,
+  user,
 })
 
 let middleware = []
