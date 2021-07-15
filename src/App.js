@@ -2,8 +2,8 @@
 
 import React from 'react'
 import './App.css'
-import {TestRedux} from './pages/redux'
-import {TestPureComponent, TestCloneElement, TestCreateFactor, TestChildren} from './pages/test'
+import { TestRedux } from './pages/redux'
+import { TestPureComponent, TestCloneElement, TestCreateFactor, TestChildren } from './pages/test'
 import {
   TestUseReducer,
   TestCreateContext,
@@ -14,15 +14,15 @@ import {
   TestUseMemo,
 } from './pages/hooks'
 
-import {TimeSlice} from './pages/largeData'
+import { TimeSlice } from './pages/largeData'
 
-import {Index01} from './pages/css'
+import { Index01 } from './pages/css'
 
-import {Question01, Question03, Question04, Question05, Question06} from './pages/questions'
+import { Question01, Question03, Question04, Question05, Question06 } from './pages/questions'
 
-import {JDemo01, JDemo02, JDemo03, JDemo04, JDemo05, JDemo06, JDemo07, JDemo08} from './pages/juejin'
+import { JDemo01, JDemo02, JDemo03, JDemo04, JDemo05, JDemo06, JDemo07, JDemo08 } from './pages/juejin'
 
-import {ExportDemo, name} from './pages/juejin/exportDemo'
+import { ExportDemo, name } from './pages/juejin/exportDemo';
 
 function App() {
   return (
