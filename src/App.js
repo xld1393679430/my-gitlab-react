@@ -20,7 +20,22 @@ import {Index01} from './pages/css'
 
 import {Question01, Question03, Question04, Question05, Question06} from './pages/questions'
 
-import {JDemo01, JDemo02, JDemo03, JDemo04, JDemo05, JDemo06, JDemo07, JDemo08} from './pages/juejin'
+// eslint-disable-next-line prettier/prettier
+import {
+  JDemo01,
+  JDemo02,
+  JDemo03,
+  JDemo04,
+  JDemo05,
+  JDemo06,
+  JDemo07,
+  JDemo08,
+  JDemo09,
+  JDemo10,
+  JDemo11,
+  JDemo12,
+  JDemo13,
+} from './pages/juejin'
 
 import {ExportDemo, name} from './pages/juejin/exportDemo'
 
@@ -66,7 +81,11 @@ function App() {
         {/* <JDemo05 /> */}
         {/* <JDemo06 /> */}
         {/* <JDemo07 /> */}
-        <JDemo08 />
+        {/* <JDemo08 /> */}
+        {/* <JDemo09 /> */}
+        {/* <JDemo10 /> */}
+        {/* <JDemo12 /> */}
+        <JDemo13 />
       </div>
 
       <div id="ExportDemo">

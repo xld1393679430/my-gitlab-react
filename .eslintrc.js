@@ -17,6 +17,7 @@ module.exports = {
     semi: ['error', 'never'], // 禁止使用分号
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
   },
   parserOptions: {
     sourceType: 'module',

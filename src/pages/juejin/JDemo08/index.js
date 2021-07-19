@@ -1,23 +1,30 @@
 /** @format */
 
-import React, {useState} from 'react'
+import React, {useState, forceUpdate} from 'react'
 
 const Page = () => {
-  let ref = null
   const [num, setNum] = useState(0)
-  console.log(11)
-
+  let ref = null
   const handleClick = () => {
     setNum(num + 1)
+    // forceUpdate()
   }
 
+  const handleChange = () => {}
+
   return (
-    <div
-      ref={el => {
-        ref = el
-        console.log('el: ', el)
-      }}>
+    <div>
+      <input
+        type="text"
+        value={num}
+        onChange={handleChange}
+        ref={el => {
+          ref = el
+          console.log('el: ', el, ref)
+        }}
+      />
       <button onClick={handleClick}>add--{num}</button>
+      {/* <p>ref: {ref?.value}</p> */}
     </div>
   )
 }
